@@ -138,4 +138,12 @@ public class ChromeTest {
             System.out.println(m.getName() + " = " + m.getValue());
         }
     }
+
+    @Test
+    void openBraveSiteWithDefaultMode(){
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://brave.com");
+        Assert.assertEquals(driver.getTitle(),"The browser that puts you first | Brave");
+        driver.quit();
+    }
 }
